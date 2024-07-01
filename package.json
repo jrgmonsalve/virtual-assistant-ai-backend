@@ -1,0 +1,22 @@
+{
+  "name": "virtual-assistant-ai-backend",
+  "version": "1.0.0",
+  "description": "api que sirve como asistente virtual utilizando inteligencia artificial",
+  "main": "index.js",
+  "scripts": {
+    "start": "serverless offline",
+    "deploy": "serverless deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "serverless": "^4.1.10",
+    "serverless-openapi-documentation": "^0.4.0",
+    "serverless-typescript": "^0.0.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}

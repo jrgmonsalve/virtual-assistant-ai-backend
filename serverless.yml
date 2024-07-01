@@ -1,0 +1,30 @@
+service: virtual-assistant-ai-backend
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+
+functions:
+  hello:
+    handler: src/handlers/hello.handler
+    events:
+      - http:
+          path: hello
+          method: get
+
+plugins:
+  - serverless-typescript
+  - serverless-openapi-documentation
+
+custom:
+  documentation:
+    api:
+      info:
+        version: '1.0.0'
+        title: 'Mi API Serverless'
+        description: 'Documentación de Mi API Serverless'
+
+package:
+  individually: true
